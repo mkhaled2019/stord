@@ -27,6 +27,7 @@ public class URLController implements IController{
 	@PostMapping("/short")
 	public ShortURLResponse convertToShortUrl(@RequestBody ShortURLRequest request) {
 		ShortURLResponse response = new ShortURLResponse();
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>");
 		logger.log(Level.FINE, ">>>>>>>>>>>>>>>>>>>>>>>>>");
 		logger.log(Level.FINE, request.getLongUrl());
 		logger.log(Level.FINE, ">>>>>>>>>>>>>>>>>>>>>>>>>");
@@ -44,6 +45,9 @@ public class URLController implements IController{
 	@GetMapping(value = "/long")
 	public LongURLResponse convertToLongUrl(@RequestParam(value = "shortUrl") String shortUrl) {
 		LongURLResponse response = new LongURLResponse();
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>");
+		System.out.println(shortUrl);
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>");
 		logger.log(Level.FINE, ">>>>>>>>>>>>>>>>>>>>>>>>>");
 		logger.log(Level.FINE, shortUrl);
 		logger.log(Level.FINE, ">>>>>>>>>>>>>>>>>>>>>>>>>");
